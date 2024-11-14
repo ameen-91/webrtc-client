@@ -10,7 +10,7 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io("https://signaling-server-g4h3ajgkbuhygpdn.canadacentral-01.azurewebsites.net"), []);
+  const socket = useMemo(() => io("#signaling-server-url"), []);
 
   return (
     <SocketContext.Provider value={socket}>
